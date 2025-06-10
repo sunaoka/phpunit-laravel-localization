@@ -1,7 +1,7 @@
 {
     "name": "sunaoka/phpunit-laravel-localization",
-    "description": "",
-    "keywords": [],
+    "description": "Laravel Localization PHPUnit testing",
+    "keywords": ["phpunit", "laravel", "localization", "testing"],
     "type": "library",
     "license": "MIT",
     "authors": [
