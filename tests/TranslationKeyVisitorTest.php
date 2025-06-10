@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use Sunaoka\PHPUnit\Laravel\Localization\Services\Translation;
 
 class TranslationKeyVisitorTest extends TestCase
@@ -13,6 +14,7 @@ class TranslationKeyVisitorTest extends TestCase
      *
      * @dataProvider dataProvider
      */
+    #[DataProvider('dataProvider')]
     public function test(string $code, array $expected): void
     {
         $actual = (new Translation)->getKeys($code);
