@@ -1,0 +1,21 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+
+parameters:
+
+    level: max
+
+    checkMissingOverrideMethodAttribute: true
+
+    paths:
+        - src/
+        - tests/
+
+    excludePaths:
+        - tests/stubs/
+
+    ignoreErrors:
+        - identifier: staticMethod.alreadyNarrowedType
+          message: '#Call to static method PHPUnit\\Framework\\Assert::assertTrue\(\) with true will always evaluate to true#'
+          path: src/LocalizationTesting.php
