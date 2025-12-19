@@ -43,6 +43,9 @@
         "ci:phpstan": "vendor/bin/phpstan analyse --memory-limit=-1"
     },
     "config": {
+        "audit": {
+            "ignore": ["laravel/framework"]
+        },
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
