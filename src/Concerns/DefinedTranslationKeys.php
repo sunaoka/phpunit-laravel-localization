@@ -73,7 +73,9 @@ trait DefinedTranslationKeys
 
         return collect($result)
             ->unique()
-            ->reject(fn (string $value) => in_array($value, $excludeKeys, true))
+            ->reject(function (string $value) use ($excludeKeys) {
+                return in_array($value, $excludeKeys, true);
+            })
             ->sort()
             ->values()
             ->all();

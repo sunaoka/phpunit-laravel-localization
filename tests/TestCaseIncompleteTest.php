@@ -40,7 +40,6 @@ class TestCaseIncompleteTest extends TestCase
      */
     public function test_app_files_only_translation_keys_override(): void
     {
-        // @phpstan-ignore classConstant.internalClass
         $this->expectException(IncompleteTestError::class);
 
         $this->test_app_files_only_translation_keys();
@@ -51,7 +50,6 @@ class TestCaseIncompleteTest extends TestCase
      */
     public function test_lang_files_only_translation_keys_override(): void
     {
-        // @phpstan-ignore classConstant.internalClass
         $this->expectException(IncompleteTestError::class);
 
         $this->test_lang_files_only_translation_keys();
