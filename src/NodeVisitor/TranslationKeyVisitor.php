@@ -14,47 +14,47 @@ class TranslationKeyVisitor extends NodeVisitorAbstract
     /**
      * @var string[]
      */
-    private array $functions;
+    private $functions;
 
     /**
      * @var string[]
      */
-    private array $methods;
+    private $methods;
 
     /**
      * @var string[]
      */
-    private array $keys = [];
+    private $keys = [];
 
     /**
      * @var string[]
      */
-    private array $transVariables = [];
+    private $transVariables = [];
 
     /**
      * @var string[]
      */
-    private array $appTranslatorVariables = [];
+    private $appTranslatorVariables = [];
 
     /**
      * @var string[]
      */
-    private array $langAliases = [];
+    private $langAliases = [];
 
     /**
      * @var string[]
      */
-    private array $namespaceAliases = [];
+    private $namespaceAliases = [];
 
     /**
      * @var string[]
      */
-    private array $injectedLangVariables = [];
+    private $injectedLangVariables = [];
 
     /**
      * @var string[]
      */
-    private array $translatorVariables = [];
+    private $translatorVariables = [];
 
     /**
      * @param  string[]|null  $functions

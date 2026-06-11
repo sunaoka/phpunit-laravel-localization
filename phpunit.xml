@@ -12,16 +12,11 @@
         </testsuite>
     </testsuites>
 
-    <coverage processUncoveredFiles="true" cacheDirectory=".ci/phpunit/code-coverage">
-        <include>
-            <directory suffix=".php">src</directory>
-        </include>
-        <report>
-            <html outputDirectory=".ci/coverage"/>
-            <clover outputFile=".ci/coverage.xml"/>
-            <text outputFile="php://stdout" showOnlySummary="true"/>
-        </report>
-    </coverage>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
 
     <php>
         <env name="APP_BASE_PATH" value="tests/stubs"/>
