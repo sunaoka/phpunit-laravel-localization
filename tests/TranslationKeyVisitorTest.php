@@ -41,7 +41,8 @@ class TranslationKeyVisitorTest extends TestCase
                     __('__');
                     trans('trans', [], 'en');
                     trans_choice('trans_choice', locale: 'en');
-                PHP,
+PHP
+                ,
                 [
                     '__',
                     'trans',
@@ -57,7 +58,8 @@ class TranslationKeyVisitorTest extends TestCase
                     trans()->choice('choice');
                     trans()->hasForLocale('hasForLocale');
                     trans()->unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -70,7 +72,8 @@ class TranslationKeyVisitorTest extends TestCase
                     $trans->choice('choice');
                     $trans->hasForLocale('hasForLocale');
                     $trans->unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -82,7 +85,8 @@ class TranslationKeyVisitorTest extends TestCase
                     app('translator')->choice('choice');
                     app('translator')->hasForLocale('hasForLocale');
                     app('translator')->unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -95,7 +99,8 @@ class TranslationKeyVisitorTest extends TestCase
                     $translator->choice('choice');
                     $translator->hasForLocale('hasForLocale');
                     $translator->unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -107,7 +112,8 @@ class TranslationKeyVisitorTest extends TestCase
                     resolve('translator')->choice('choice');
                     resolve('translator')->hasForLocale('hasForLocale');
                     resolve('translator')->unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -120,7 +126,8 @@ class TranslationKeyVisitorTest extends TestCase
                     $translator->choice('choice');
                     $translator->hasForLocale('hasForLocale');
                     $translator->unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -132,7 +139,8 @@ class TranslationKeyVisitorTest extends TestCase
                     \Lang::choice('choice');
                     \Lang::hasForLocale('hasForLocale');
                     \Lang::unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -145,7 +153,8 @@ class TranslationKeyVisitorTest extends TestCase
                     Lang::choice('choice');
                     Lang::hasForLocale('hasForLocale');
                     Lang::unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -158,7 +167,8 @@ class TranslationKeyVisitorTest extends TestCase
                     Facades\Lang::choice('choice');
                     Facades\Lang::hasForLocale('hasForLocale');
                     Facades\Lang::unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -171,7 +181,8 @@ class TranslationKeyVisitorTest extends TestCase
                     LangAlias::choice('choice');
                     LangAlias::hasForLocale('hasForLocale');
                     LangAlias::unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -183,7 +194,8 @@ class TranslationKeyVisitorTest extends TestCase
                     \Illuminate\Support\Facades\Lang::choice('choice');
                     \Illuminate\Support\Facades\Lang::hasForLocale('hasForLocale');
                     \Illuminate\Support\Facades\Lang::unknownMethod('unknownMethod');
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -202,7 +214,8 @@ class TranslationKeyVisitorTest extends TestCase
                             $lang->unknownMethod('unknownMethod');
                         }
                     }
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -221,7 +234,8 @@ class TranslationKeyVisitorTest extends TestCase
                             $lang->unknownMethod('unknownMethod');
                         }
                     }
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -240,7 +254,8 @@ class TranslationKeyVisitorTest extends TestCase
                             $lang->unknownMethod('unknownMethod');
                         }
                     }
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -258,7 +273,8 @@ class TranslationKeyVisitorTest extends TestCase
                             $lang->unknownMethod('unknownMethod');
                         }
                     }
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -277,7 +293,8 @@ class TranslationKeyVisitorTest extends TestCase
                             $lang->unknownMethod('unknownMethod');
                         }
                     }
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -296,7 +313,8 @@ class TranslationKeyVisitorTest extends TestCase
                             $lang->unknownMethod('unknownMethod');
                         }
                     }
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -315,7 +333,8 @@ class TranslationKeyVisitorTest extends TestCase
                             $lang->unknownMethod('unknownMethod');
                         }
                     }
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -333,7 +352,8 @@ class TranslationKeyVisitorTest extends TestCase
                             $lang->unknownMethod('unknownMethod');
                         }
                     }
-                PHP,
+PHP
+                ,
                 $expected,
             ],
 
@@ -363,7 +383,8 @@ class TranslationKeyVisitorTest extends TestCase
                             $lang->get('get');
                         }
                     }
-                PHP,
+PHP
+                ,
                 [],
             ],
         ];

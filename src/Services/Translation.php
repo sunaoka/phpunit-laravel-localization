@@ -11,17 +11,32 @@ use Sunaoka\PHPUnit\Laravel\Localization\NodeVisitor\TranslationKeyVisitor;
 
 class Translation
 {
-    private Parser $parser;
+    /**
+     * @var Parser
+     */
+    private $parser;
+
+    /**
+     * @var string[]|null
+     */
+    private $functions = null;
+
+    /**
+     * @var string[]|null
+     */
+    private $methods = null;
 
     /**
      * @param  string[]|null  $functions
      * @param  string[]|null  $methods
      */
     public function __construct(
-        private readonly ?array $functions = null,
-        private readonly ?array $methods = null,
+        ?array $functions = null,
+        ?array $methods = null,
         ?Parser $parser = null
     ) {
+        $this->methods = $methods;
+        $this->functions = $functions;
         $this->parser = $parser ?? (new ParserFactory)->createForHostVersion();
     }
 

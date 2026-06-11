@@ -54,14 +54,16 @@ trait UsedTranslationKeys
      */
     protected function getUsedKeys(array $excludeKeys = []): array
     {
-        $result = [
-            ...$this->getUsedKeysFromSearchPaths(),
-            ...$this->getUsedKeysFromViewPath(),
-        ];
+        $result = array_merge(
+            $this->getUsedKeysFromSearchPaths(),
+            $this->getUsedKeysFromViewPath()
+        );
 
         return collect($result)
             ->unique()
-            ->reject(fn (string $value) => in_array($value, $excludeKeys, true))
+            ->reject(function (string $value) use ($excludeKeys) {
+                return in_array($value, $excludeKeys, true);
+            })
             ->sort()
             ->values()
             ->all();
