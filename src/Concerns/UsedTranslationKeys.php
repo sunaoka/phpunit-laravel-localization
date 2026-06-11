@@ -80,7 +80,7 @@ trait UsedTranslationKeys
 
         $translationKey = $this->getTranslationInstance();
 
-        $files = Finder::create()->files()->in($this->searchPaths());
+        $files = Finder::create()->files()->in($this->searchPaths())->name('*.php');
         foreach ($files as $file) {
             $code = $file->getContents();
             $key = $translationKey->getKeys($code);
@@ -107,7 +107,7 @@ trait UsedTranslationKeys
 
         $translationKey = $this->getTranslationInstance();
 
-        $files = Finder::create()->files()->in($this->viewPath());
+        $files = Finder::create()->files()->in($this->viewPath())->name('*.blade.php');
         foreach ($files as $file) {
             $code = $this->compileBladeTemplate($file->getPathname());
             $key = $translationKey->getKeys($code);
