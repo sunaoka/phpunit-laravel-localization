@@ -12,6 +12,12 @@
         </testsuite>
     </testsuites>
 
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+
     <php>
         <env name="APP_BASE_PATH" value="tests/stubs"/>
     </php>
