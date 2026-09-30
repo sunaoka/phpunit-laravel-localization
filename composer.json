@@ -48,6 +48,7 @@
             "ignore": [
                 "laravel/framework",
                 "league/commonmark",
+                "league/flysystem",
                 "symfony/http-foundation",
                 "symfony/mailer",
                 "symfony/mime",
